@@ -3,82 +3,132 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Xin chào, tôi là Thành!</title>
+  <title>Thành Tặc Blog</title>
   <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
       background: linear-gradient(135deg, #1a1a1a, #333);
       color: #f1f1f1;
-      text-align: center;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
     }
 
-    /* Ảnh bìa */
-    .banner {
-      width: 100%;
-      height: 300px;
-      background-image: url('IMG_3252.jpeg'); /* đổi thành tên ảnh của bạn */
+    header {
+      text-align: center;
+      padding: 60px 20px 30px;
+      background-image: url('banner.jpg'); /* Thay bằng ảnh banner của bạn */
       background-size: cover;
       background-position: center;
       border-bottom: 3px solid #00b894;
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: -1;
-      opacity: 0.4; /* làm mờ nhẹ để nổi chữ */
     }
 
-    h1 {
+    header h1 {
       font-size: 48px;
-      margin-top: 100px;
-      margin-bottom: 10px;
+      margin: 0;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
     }
 
-    p {
+    header p {
       font-size: 20px;
-      max-width: 600px;
+      color: #ddd;
+    }
+
+    .blog-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 40px 20px;
+      gap: 30px;
+    }
+
+    .post {
+      background: #222;
+      width: 300px;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+      transition: transform 0.3s;
+    }
+
+    .post:hover {
+      transform: translateY(-8px);
+    }
+
+    .post img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .post-content {
+      padding: 20px;
+    }
+
+    .post-content h2 {
+      font-size: 22px;
+      color: #00b894;
+      margin-top: 0;
+    }
+
+    .post-content p {
+      color: #ccc;
+      font-size: 16px;
       line-height: 1.6;
     }
 
-    a {
+    .read-more {
       display: inline-block;
-      margin-top: 25px;
-      padding: 12px 28px;
+      margin-top: 10px;
       background: #00b894;
       color: white;
+      padding: 8px 16px;
+      border-radius: 20px;
       text-decoration: none;
-      border-radius: 30px;
       transition: background 0.3s;
     }
-    a:hover {
+
+    .read-more:hover {
       background: #019870;
     }
 
     footer {
-      position: absolute;
-      bottom: 15px;
-      font-size: 14px;
+      text-align: center;
+      padding: 20px;
       color: #aaa;
+      font-size: 14px;
+      border-top: 1px solid #333;
     }
   </style>
 </head>
 <body>
-  <div class="banner"></div>
+  <header>
+    <h1>Thành Tặc Blog 👋</h1>
+    <p>Chia sẻ về sáng tạo, công nghệ và hành trình học hỏi</p>
+  </header>
 
-  <h1>Xin chào, tôi là Thành Tặc 👋</h1>
-  <p>
-    Tôi yêu sáng tạo, công nghệ và chia sẻ kiến thức.<br>
-    Đây là không gian cá nhân của tôi – nơi tôi giới thiệu các dự án, ý tưởng và công việc mình đang theo đuổi.
-  </p>
-  <a href="https://www.facebook.com" target="_blank">Kết nối với tôi</a>
+  <section class="blog-container">
+
+    <div class="post">
+      <img src="thumb1.jpg" alt="Bài viết 1">
+      <div class="post-content">
+        <h2>Bài viết đầu tiên 🌱</h2>
+        <p>Khám phá hành trình tôi bắt đầu với GitHub Pages và niềm vui khi tạo web cá nhân.</p>
+        <a href="bai1.html" class="read-more">Đọc thêm</a>
+      </div>
+    </div>
+
+    <div class="post">
+      <img src="thumb2.jpg" alt="Bài viết 2">
+      <div class="post-content">
+        <h2>Tư duy sáng tạo trong công nghệ 💡</h2>
+        <p>Cách tôi học và ứng dụng sáng tạo trong các dự án cá nhân nhỏ hằng ngày.</p>
+        <a href="bai2.html" class="read-more">Đọc thêm</a>
+      </div>
+    </div>
+
+  </section>
 
   <footer>
-    © 2025 Thành Tặc | Tạo bằng GitHub Pages
+    © 2025 Thành Tặc | Xây dựng với 💚 GitHub Pages
   </footer>
 </body>
 </html>
