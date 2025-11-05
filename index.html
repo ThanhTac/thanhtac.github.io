@@ -17,15 +17,34 @@
       justify-content: center;
       align-items: center;
     }
+
+    /* Ảnh bìa */
+    .banner {
+      width: 100%;
+      height: 300px;
+      background-image: url('banner.jpg'); /* đổi thành tên ảnh của bạn */
+      background-size: cover;
+      background-position: center;
+      border-bottom: 3px solid #00b894;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      opacity: 0.4; /* làm mờ nhẹ để nổi chữ */
+    }
+
     h1 {
       font-size: 48px;
+      margin-top: 100px;
       margin-bottom: 10px;
     }
+
     p {
       font-size: 20px;
       max-width: 600px;
       line-height: 1.6;
     }
+
     a {
       display: inline-block;
       margin-top: 25px;
@@ -39,6 +58,7 @@
     a:hover {
       background: #019870;
     }
+
     footer {
       position: absolute;
       bottom: 15px;
@@ -48,9 +68,11 @@
   </style>
 </head>
 <body>
+  <div class="banner"></div>
+
   <h1>Xin chào, tôi là Thành Tặc 👋</h1>
   <p>
-    Tôi yêu sáng tạo, công nghệ và chia sẻ kiến thức.  
+    Tôi yêu sáng tạo, công nghệ và chia sẻ kiến thức.<br>
     Đây là không gian cá nhân của tôi – nơi tôi giới thiệu các dự án, ý tưởng và công việc mình đang theo đuổi.
   </p>
   <a href="https://www.facebook.com" target="_blank">Kết nối với tôi</a>
